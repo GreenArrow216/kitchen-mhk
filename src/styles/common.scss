@@ -36,7 +36,7 @@ button {
     box-shadow: none;
     &:hover {
       background-color: vars.$white;
-      color: vars.$body-text-color;
+      color: vars.$title-text-color;
     }
   }
 }
@@ -66,4 +66,17 @@ p {
   &.primary {
     color: vars.$primary-color;
   }
+}
+
+@keyframes fadeInOverlay {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.menu-modal .overlay {
+  animation: fadeInOverlay 0.3s ease forwards;
 }

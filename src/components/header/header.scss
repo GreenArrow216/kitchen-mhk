@@ -1,5 +1,5 @@
 @use "../../styles/variables" as vars;
-@use '../../styles/mixin' as *;
+@use "../../styles/mixin" as *;
 
 .header {
   letter-spacing: vars.$spaced-letters;
@@ -14,6 +14,14 @@
   position: absolute;
   left: calc((100% - 80%) / 2);
 
+  .desktop-nav,
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
   .icons {
     display: flex;
     justify-content: center;
@@ -22,31 +30,72 @@
       margin-right: 5px;
     }
   }
-  .left-nav, .right-nav {
+  .left-nav,
+  .right-nav {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
   }
   .logo-link {
-    margin:0 80px;
+    margin: 0 80px;
   }
-  
+
   a {
     text-decoration: none;
     color: vars.$white;
     font-size: 13px;
   }
-  button {
+  button.outline {
     font-size: 13px;
-    img {
-      width: 14px;
+    svg {
       margin-left: 12px;
+    }
+    &:hover {
+      svg {
+        stroke: vars.$title-text-color;
+        fill: white;
+      }
+    }
+  }
+
+  .hamburger {
+    width: 30px;
+    height: 30px;
+  }
+
+  @include respond-to(desktop) {
+    .mobile-nav {
+      display: none;
     }
   }
 
   @include respond-to(tablet) {
     width: 100%;
     left: 0;
+    padding: 20px;
+     button.outline {
+    font-size: 13px;
+    svg {
+      margin-left: 0;
+    }
+  }
+    .desktop-nav {
+      display: none;
+    }
+  }
+
+  @include respond-to(mobile) {
+    padding: 10px;
+    .logo-link {
+      img {
+        width: 60px;
+      }
+    }
+    .mobile-nav {
+      button {
+        padding: 10px 15px;
+      }
+    }
   }
 }
