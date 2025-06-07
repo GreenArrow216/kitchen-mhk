@@ -1,0 +1,135 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixin" as *;
+
+.footer {
+  background-image: url("../../assets/images/Bisect.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 0;
+  .horizontal-line {
+    height: 1px;
+    background-color: vars.$white;
+    opacity: 0.2;
+    width: 80%;
+  }
+  .footer-heading {
+    // padding: 60px 0;
+    margin-bottom: 50px;
+    align-items: center;
+    .horizontal-line {
+      flex-basis: 50%;
+    }
+    img {
+      flex-shrink: 0;
+      padding: 0 20px;
+    }
+  }
+  .footer-links {
+    justify-content: space-evenly;
+    margin-bottom: 45px;
+  }
+  .footer-heading,
+  .footer-links {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  .column {
+    display: flex;
+    flex-basis: 20%;
+    flex-direction: column;
+    h4 {
+      margin-bottom: 35px;
+      color: vars.$white;
+    }
+    a {
+      color: white;
+      opacity: 0.8;
+      font-size: 13px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      letter-spacing: vars.$spaced-letters;
+    }
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+  & > * {
+    z-index: 2;
+    position: relative;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+  }
+  .rounded-icon {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: vars.$white;
+    margin-right: 15px;
+    cursor: pointer;
+    &:last-child {
+      margin: 0;
+    }
+    svg {
+      display: block;
+    }
+  }
+  .copyright {
+    text-align: center;
+    color: vars.$white;
+    opacity: 0.5;
+    margin-bottom: 100px;
+    line-height: 2;
+  }
+  @include respond-to(tablet) {
+    padding: 30px 0;
+    .copyright {
+      margin-bottom: 40px;
+      p {
+        font-size: 10px;
+      }
+    }
+    .footer-links {
+      width: 100%;
+      justify-content: space-evenly;
+    }
+    .column {
+      a {
+        font-size: 11px;
+      }
+      .rounded-icon {
+        padding: 8px;
+      }
+    }
+  }
+
+  @include respond-to(mobile) {
+    padding: 30px 0;
+    .footer-links {
+      flex-wrap: wrap;
+    }
+    .footer-heading {
+      margin-bottom: 30px;
+    }
+    .column {
+      flex-basis: 50%;
+      margin-bottom: 20px;
+      h4 {
+        margin-bottom: 20px;
+      }
+      a {
+        font-size: 11px;
+      }
+    }
+  }
+}
