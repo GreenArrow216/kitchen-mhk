@@ -15,11 +15,11 @@ HAD TO REPLACE AFTER DEPLOYMENT
 
 ## 🛠 Tech Stack
 
-- ⚛️ React 18
+- ⚛️ React 19
 - 🧠 TypeScript
 - ⚡ Vite
 - 🎨 SCSS Modules (with variables and mixins)
-- 📱 Responsive layout with CSS Flexbox & Grid
+- 📱 Responsive layout
 - 🧩 Custom components
 - ✅ Cross-browser compatible (modern browsers)
 
