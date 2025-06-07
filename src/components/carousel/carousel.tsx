@@ -39,15 +39,18 @@ const Carousel = ({ children, interval = 100000, from }: CarouselProps) => {
           <img src={LeftChevron} alt={"left-chevron.svg"} />
         </button>
       )}
-      <div
-        className="carousel-wrapper"
-        style={{ transform: `translateX(-${current * 100}%)` }}
-      >
-        {children.map((child, index) => (
-          <div className={`carousel-slide`} key={index}>
-            {child}
-          </div>
-        ))}
+
+      <div className="carousel-viewport">
+        <div
+          className="carousel-wrapper"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {children.map((child, i) => (
+            <div className="carousel-slide" key={i}>
+              {child}
+            </div>
+          ))}
+        </div>
       </div>
       {from === "testimonial" && (
         <button
