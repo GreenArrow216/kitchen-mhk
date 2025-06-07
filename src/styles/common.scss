@@ -1,0 +1,66 @@
+@use "./variables" as vars;
+
+button {
+  border-radius: 30px;
+  padding: 15px 25px;
+  font-size: 15px;
+  border: 0;
+  background: vars.$primary-color;
+  transition: all 0.3s;
+  letter-spacing: vars.$spaced-letters;
+  //   &.primary {
+  box-shadow: 0px 2px 10px #00000033;
+  color: vars.$white;
+  &:hover {
+    background: #c8a74b;
+    box-shadow: 0px 2px 5px #00000040;
+  }
+  //   }
+  &.primary-outline {
+    background: #ffffff;
+    border: 1px solid #d4b254;
+    color: vars.$primary-color;
+    box-shadow: none;
+    &:hover {
+      background: #c8a74b 0% 0% no-repeat padding-box;
+      color: vars.$white;
+    }
+  }
+  &.outline {
+    border: 1px solid #ffffff;
+    color: vars.$white;
+    background-color: transparent;
+    box-shadow: none;
+    &:hover {
+      background-color: vars.$white;
+      color: vars.$body-text-color;
+    }
+  }
+}
+
+h1 {
+  font-size: 52px;
+}
+
+h2 {
+  font-size: 42px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 13px;
+  &.primary {
+    color: vars.$primary-color;
+  }
+}
