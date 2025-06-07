@@ -3,16 +3,17 @@
 
 .header {
   letter-spacing: vars.$spaced-letters;
-  background-color: black;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
+  width: 70%;
   margin: auto;
   padding: 40px 10px;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
   position: absolute;
-  left: calc((100% - 80%) / 2);
+  z-index: 10;
+  left: 18%;
 
   .desktop-nav,
   .mobile-nav {
@@ -74,23 +75,37 @@
     width: 100%;
     left: 0;
     padding: 20px;
-     button.outline {
-    font-size: 13px;
-    svg {
-      margin-left: 0;
+    button.outline {
+      font-size: 13px;
+      svg {
+        margin-left: 0;
+      }
     }
-  }
     .desktop-nav {
       display: none;
+    }
+    .logo-link {
+      margin: 0;
     }
   }
 
   @include respond-to(mobile) {
+    width: 100%;
+    left: 0;
     padding: 10px;
     .logo-link {
+      margin: 0px;
       img {
         width: 60px;
       }
+    }
+    button.outline {
+      svg {
+        margin-left: 0;
+      }
+    }
+    .desktop-nav {
+      display: none;
     }
     .mobile-nav {
       button {
