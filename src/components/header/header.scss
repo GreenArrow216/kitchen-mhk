@@ -76,7 +76,7 @@
     left: 0;
     padding: 20px;
     button.outline {
-      font-size: 13px;
+      border: none;
       svg {
         margin-left: 0;
       }
@@ -86,6 +86,12 @@
     }
     .logo-link {
       margin: 0;
+      display: flex;
+      width: 95%;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: -1;
     }
   }
 
@@ -108,8 +114,18 @@
       display: none;
     }
     .mobile-nav {
-      button {
+      button.outline {
         padding: 10px 15px;
+        border: none;
+      }
+      .logo-link {
+        margin: 0;
+        display: flex;
+        width: 95%;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: -1;
       }
     }
   }

@@ -96,7 +96,7 @@
     .copyright {
       margin-bottom: 40px;
       p {
-        font-size: 10px;
+        font-size: 12px;
       }
     }
     .footer-links {
@@ -115,8 +115,15 @@
 
   @include respond-to(mobile) {
     padding: 30px 0;
+    .copyright {
+      margin-bottom: 30px;
+      p {
+        font-size: 10px;
+      }
+    }
     .footer-links {
       flex-wrap: wrap;
+      margin-bottom: 25px;
     }
     .footer-heading {
       margin-bottom: 30px;
