@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# 🍽️ Kitchen MHK - Responsive Homepage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **pixel-perfect**, **responsive** homepage built with **React**, **TypeScript**, and **Vite**, based on a design provided in Adobe XD. It showcases custom UI implementation with modern web development practices.
 
-Currently, two official plugins are available:
+> [🔗 View the Adobe XD Design](https://xd.adobe.com/view/cffd8229-5018-4e51-82f0-87f5b18ef0fc-9aae/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+> [🔗 View Live Site](#)  
+HAD TO REPLACE AFTER DEPLOYMENT
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- ⚛️ React 18
+- 🧠 TypeScript
+- ⚡ Vite
+- 🎨 SCSS Modules (with variables and mixins)
+- 📱 Responsive layout with CSS Flexbox & Grid
+- 🧩 Custom components
+- ✅ Cross-browser compatible (modern browsers)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 📁 Project Structure
+
+kitchen-mhk/
+├── public/
+│ └──  # Images and fonts
+├── src/
+│ ├── assets/ # Static assets (SVGs, icons)
+│ ├── components/ # Reusable React components
+│ ├── pages/ # Main page components
+│ ├── styles/ # SCSS global and variable files
+│ ├── App.tsx # Root component
+│ └── main.tsx # Entry point
+├── .gitignore
+├── index.html
+├── README.md
+├── package.json
+└── tsconfig.json
+
+
+---
+
+## 🎨 Design Requirements
+
+- ✅ **Pixel Perfect**: Matches Adobe XD layout exactly
+- ✅ **Responsive**: Mobile-first design, scales across all screen sizes
+- ✅ **Modern Browser Support**: Chrome, Firefox, Edge, Safari
+- ✅ **Custom Code**: Minimal dependencies, prioritizing handcrafted CSS and components
+
+---
+
+## 🧪 How to Run Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/GreenArrow216/kitchen-mhk.git
+
+# Navigate into the project
+cd kitchen-mhk
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
