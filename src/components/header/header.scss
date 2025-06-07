@@ -1,0 +1,52 @@
+@use "../../styles/variables" as vars;
+@use '../../styles/mixin' as *;
+
+.header {
+  letter-spacing: vars.$spaced-letters;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding: 40px 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  left: calc((100% - 80%) / 2);
+
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      margin-right: 5px;
+    }
+  }
+  .left-nav, .right-nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .logo-link {
+    margin:0 80px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: vars.$white;
+    font-size: 13px;
+  }
+  button {
+    font-size: 13px;
+    img {
+      width: 14px;
+      margin-left: 12px;
+    }
+  }
+
+  @include respond-to(tablet) {
+    width: 100%;
+    left: 0;
+  }
+}

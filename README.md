@@ -18,7 +18,7 @@ HAD TO REPLACE AFTER DEPLOYMENT
 - ⚛️ React 19
 - 🧠 TypeScript
 - ⚡ Vite
-- 🎨 SCSS Modules (with variables and mixins)
+- 🎨 SCSS Modules
 - 📱 Responsive layout
 - 🧩 Custom components
 - ✅ Cross-browser compatible (modern browsers)

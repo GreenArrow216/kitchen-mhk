@@ -11,6 +11,9 @@ button {
   //   &.primary {
   box-shadow: 0px 2px 10px #00000033;
   color: vars.$white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover {
     background: #c8a74b;
     box-shadow: 0px 2px 5px #00000040;
