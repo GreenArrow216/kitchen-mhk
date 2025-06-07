@@ -1,0 +1,29 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixin" as *;
+
+.testimonial-wrapper {
+  background-color: vars.$light-grey;
+  padding: 120px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h3 {
+    max-width: 600px;
+    margin-bottom: 25px;
+  }
+  .testimonial-slide {
+    max-width: 600px;
+    margin-bottom: 30px;
+    .description {
+      color: vars.$body-text-color;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .author {
+      color: vars.$body-text-color;
+      font-size: 13px;
+    }
+  }
+}

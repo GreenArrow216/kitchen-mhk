@@ -1,74 +1,96 @@
 @use "../../styles/variables" as vars;
 @use "../../styles/mixin" as *;
 
-.carousel {
+.hero {
+  .carousel-slide {
+    height: 80vh;
+  }
+}
+.testimonial {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.carousel {
+  overflow: hidden;
   position: relative;
-  background-image: url("../../assets/images/Hero.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 80vh;
-  color: white;
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-slide-content {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    z-index: 1;
-  }
-  > * {
+    background-size: cover;
+    background-position: center;
     position: relative;
-    z-index: 2;
-  }
-  .content {
-    max-width: 690px;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    p {
-      margin-bottom: 12px;
-      letter-spacing: vars.$spaced-letters;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
     }
-    h1 {
-      letter-spacing: -1px;
-      margin-bottom: 30px;
-      line-height: 1;
+
+    .content {
+      max-width: 690px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 2;
+      color: white;
+      p {
+        margin-bottom: 12px;
+        letter-spacing: vars.$spaced-letters;
+      }
+      h1 {
+        letter-spacing: -1px;
+        margin-bottom: 30px;
+        line-height: 1;
+      }
     }
   }
+
   .page-indicator {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 180px;
     position: absolute;
     bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
 
     span {
       width: 50px;
       height: 5px;
-      background-color: vars.$white;
       border-radius: 3px;
+      background: white;
+      margin: 0 5px;
       cursor: pointer;
+      opacity: 0.5;
+      transition: all 0.3s ease;
       &.active {
-        background-color: vars.$primary-color;
-      }
-      margin-right: 10px;
-      &:last-child {
-        margin-right: 0;
+        background: vars.$primary-color;
+        opacity: 1;
       }
     }
   }
   @include respond-to(mobile) {
-    min-height: 60vh;
     .content {
       max-width: 400px;
       button.lg {

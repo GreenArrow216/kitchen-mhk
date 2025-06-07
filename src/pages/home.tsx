@@ -1,5 +1,5 @@
 import Bisect from "../components/bisect/bisect";
-import Carousel from "../components/carousel/carousel";
+import HeroCarousel from "../components/heroCarousel/heroCarousel";
 import Gallery from "../components/gallery/gallery";
 import Testimonial from "../components/testimonial/testimonial";
 import "../styles/common.scss"
@@ -7,7 +7,7 @@ import "../styles/common.scss"
 const Home = () => {
   return (
     <div>
-     <Carousel/>
+     <HeroCarousel/>
      <Bisect/>
      <Testimonial/>
      <Gallery/>

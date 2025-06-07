@@ -6,7 +6,7 @@ const Bisect = () => {
       <div className="img-container"/>
       <div className="bisect-content">
         <div className="discover">
-          <p>QUALITY CRAFTMANSHIP FROM BUILD TO DELIVERY</p>
+          <p className='orange-p'>QUALITY CRAFTMANSHIP FROM BUILD TO DELIVERY</p>
           <h2>Discover the beauty of a handmade kitchen</h2>
           <p className="desc">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget
