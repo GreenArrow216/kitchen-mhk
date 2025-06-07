@@ -1,4 +1,5 @@
 @use "./variables" as vars;
+@use "./mixin" as *;
 
 button {
   border-radius: 30px;
@@ -42,6 +43,12 @@ button {
       background-color: vars.$white;
       color: vars.$title-text-color;
     }
+  }
+  @include respond-to(mobile){
+    &.lg {
+        padding: 15px 25px;
+        font-size: 12px;
+      }
   }
 }
 
