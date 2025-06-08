@@ -1,5 +1,5 @@
-@use "../../styles/variables" as vars;
-@use "../../styles/mixin" as *;
+@use "../../../../styles/variables" as vars;
+@use "../../../../styles/mixin" as *;
 
 .testimonial-wrapper {
   background-color: vars.$light-grey;
@@ -51,19 +51,19 @@
   @include respond-to(mobile) {
     padding: 30px;
     button.icon-btn {
-        padding:0;
+      padding: 0;
     }
     h3 {
-        font-size: 22px;
-        margin-bottom: 10px;
+      font-size: 22px;
+      margin-bottom: 10px;
     }
     .lg {
-        margin:20px 0;
+      margin: 20px 0;
     }
     .testimonial-slide {
-        .description {
-            font-size: 15px;
-        }
+      .description {
+        font-size: 15px;
+      }
     }
   }
 }

@@ -4,6 +4,7 @@
 .hero {
   .carousel-slide {
     height: 80vh;
+    min-height: 600px;
   }
 }
 .carousel.testimonial {
@@ -25,9 +26,6 @@
   }
 
   .carousel-slide {
-    flex: 0 0 100%;
-    max-width: 100%;
-    box-sizing: border-box;
     padding: 2rem;
   }
   @include respond-to(tablet) {

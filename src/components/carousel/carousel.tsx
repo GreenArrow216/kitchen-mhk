@@ -10,7 +10,7 @@ interface CarouselProps {
   from: "hero" | "testimonial";
 }
 
-const Carousel = ({ children, interval = 100000, from }: CarouselProps) => {
+const Carousel = ({ children, interval = 10000, from }: CarouselProps) => {
   const [current, setCurrent] = useState(0);
   const length = children.length;
 

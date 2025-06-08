@@ -1,6 +1,6 @@
+import Carousel from "../../../../components/carousel/carousel";
 import "./testimonial.scss";
-import Carousel from "../carousel/carousel";
-import "./testimonial.scss"
+import "./testimonial.scss";
 
 type TestimonialType = {
   testimonial: string;
@@ -26,7 +26,6 @@ const TESTIMONIALS: TestimonialType[] = [
 ];
 
 const Testimonial = () => {
-
   return (
     <div className="testimonial-wrapper">
       <p className="orange-p">WHAT OUR CUSTOMERS SAY</p>

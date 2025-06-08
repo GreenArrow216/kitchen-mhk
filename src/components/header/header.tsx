@@ -27,7 +27,7 @@ const Header = () => {
           <img src={Logo} alt={"logo.svg"} />
         </a>
         <button className="outline">
-          <Cart/>
+          <Cart />
         </button>
       </div>
       <MenuModal isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
@@ -50,7 +50,7 @@ const Header = () => {
         </div>
         <button className="outline">
           MY ORDER
-          <Cart/>
+          <Cart />
         </button>
       </div>
     </div>

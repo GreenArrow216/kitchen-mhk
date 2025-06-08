@@ -58,11 +58,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// About
-// Shop Plan My Kitchen About Us Gallery
-// service
-// FAQ Contact How to Buy Downloads
-// info
-// Delivery Terms Privacy
-// followa

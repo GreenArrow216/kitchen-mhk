@@ -1,9 +1,9 @@
-import Gallery1 from "../../assets/images/Gallery-1.png";
-import Gallery2 from "../../assets/images/Gallery-2.png";
-import Gallery3 from "../../assets/images/Gallery-3.png";
-import Gallery4 from "../../assets/images/Gallery-4.png";
+import Gallery1 from "../../../../assets/images/Gallery-1.png";
+import Gallery2 from "../../../../assets/images/Gallery-2.png";
+import Gallery3 from "../../../../assets/images/Gallery-3.png";
+import Gallery4 from "../../../../assets/images/Gallery-4.png";
 
-import "./gallery.scss"
+import "./gallery.scss";
 
 const images = [
   { src: Gallery1, alt: "Gallery-1.png" },
