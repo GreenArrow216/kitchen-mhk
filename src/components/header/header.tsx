@@ -1,20 +1,36 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Facebook from "../icons/Facebook";
 import Instagram from "../icons/Instagram";
 import Twitter from "../icons/twitter";
 import Logo from "../../assets/svg/logo.svg";
 import MenuModal from "../menuModal/menuModal";
-
 import Hamburger from "../../assets/svg/menu.svg";
-
-import "./header.scss";
 import Cart from "../icons/Cart";
 
+import "./header.scss";
+
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const isScrolledRef = useRef<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const shouldBeScrolled = window.scrollY > 100;
+
+      if (shouldBeScrolled !== isScrolledRef.current) {
+        isScrolledRef.current = shouldBeScrolled;
+        setIsScrolled(shouldBeScrolled);
+        console.log("called", shouldBeScrolled);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="header">
+    <div className={`header ${isScrolled ? "scrolled" : ""}`}>
       <div className="mobile-nav">
         <img
           className="hamburger"

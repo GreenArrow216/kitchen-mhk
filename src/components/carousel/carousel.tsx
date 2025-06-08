@@ -11,7 +11,7 @@ interface CarouselProps {
 }
 
 const Carousel = ({ children, interval = 10000, from }: CarouselProps) => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState<number>(0);
   const length = children.length;
 
   const nextSlide = () => setCurrent((prev) => (prev + 1) % length);
