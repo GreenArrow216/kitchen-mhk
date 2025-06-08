@@ -15,7 +15,9 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-heading">
         <div className="horizontal-line" />
-        <img src={Logo} alt={"logo.svg"} />
+        <div className="logo">
+          <img src={Logo} alt={"logo.svg"} />
+        </div>
         <div className="horizontal-line" />
       </div>
       <div className="footer-links">

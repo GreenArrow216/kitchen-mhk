@@ -99,4 +99,20 @@
       }
     }
   }
+
+  @include respond-to(2k) {
+    .bisect-content {
+      .discover {
+        h2 {
+          max-width: 1000px;
+        }
+        .desc {
+          font-size: 22px;
+          max-width: 1000px;
+          line-height: 1.6;
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
 }

@@ -44,6 +44,11 @@
     display: flex;
     flex-direction: column;
 
+    img {
+      width: unset;
+      height: unset;
+    }
+
     &.slide-in {
       animation: slideIn 0.3s ease-out forwards;
     }

@@ -56,4 +56,10 @@
       }
     }
   }
+  @include respond-to(2k) {
+    .gallery-image {
+      height: 600px;
+      width: 600px;
+    }
+  }
 }

@@ -80,4 +80,25 @@
       }
     }
   }
+
+  @include respond-to(2k) {
+    h3 {
+      max-width: 1000px;
+    }
+
+    .lg {
+      margin: 100px 0;
+    }
+
+    .testimonial-slide {
+      max-width: 1000px;
+      .description {
+        font-size: 32px;
+        margin-bottom: 50px;
+      }
+      .author {
+        font-size: 25px;
+      }
+    }
+  }
 }

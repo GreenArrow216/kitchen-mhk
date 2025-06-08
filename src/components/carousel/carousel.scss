@@ -6,6 +6,22 @@
     height: 80vh;
     min-height: 600px;
   }
+
+  @include respond-to(2k) {
+    &.carousel {
+      .carousel-slide-content {
+        .content {
+          max-width: 1500px;
+          h1 {
+            font-size: 100px;
+          }
+          p {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
 }
 .carousel.testimonial {
   position: relative;
@@ -17,6 +33,7 @@
   .carousel-viewport {
     width: 100%;
     overflow: hidden;
+
   }
 
   .carousel-wrapper {
@@ -51,6 +68,12 @@
     .carousel-slide {
       padding: 5px;
     }
+  }
+
+  @include respond-to(2k) {
+      .carousel-viewport {
+        width: 50%;
+      }
   }
 }
 
@@ -184,5 +207,11 @@
         font-size: 29px;
       }
     }
+  }
+
+  @include respond-to(2k) {
+  }
+
+  @include respond-to(2k) {
   }
 }

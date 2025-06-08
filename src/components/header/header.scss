@@ -52,8 +52,7 @@
     align-items: center;
     justify-content: space-evenly;
     a {
-      margin:0 10px;
-      
+      margin: 0 10px;
     }
   }
   .logo-link {
@@ -83,6 +82,25 @@
     height: 30px;
   }
 
+  @include respond-to(2k) {
+    a {
+      font-size: 25px;
+    }
+    .logo-link {
+      width: 150px;
+      height: 150px;
+    }
+    .mobile-nav {
+      display: none;
+    }
+    .icons {
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
   @include respond-to(desktop) {
     .mobile-nav {
       display: none;
@@ -110,6 +128,7 @@
       align-items: center;
       position: absolute;
       z-index: -1;
+      height: 40px;
     }
   }
 
@@ -144,6 +163,7 @@
         align-items: center;
         position: absolute;
         z-index: -1;
+        height: 40px;
       }
     }
   }

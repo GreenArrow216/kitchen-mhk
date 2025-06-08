@@ -12,7 +12,11 @@
       @content;
     }
   } @else if $breakpoint == desktop {
-    @media (min-width: 1025px) {
+    @media (min-width: 1025px) and (max-width:2399px){
+      @content;
+    }
+  } @else if $breakpoint == 2k {
+    @media (min-width: 2400px) {
       @content;
     }
   }

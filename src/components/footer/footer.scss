@@ -18,13 +18,18 @@
     opacity: 0.2;
     width: 80%;
   }
+  .logo {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
   .footer-heading {
     margin-bottom: 50px;
     align-items: center;
     .horizontal-line {
       flex-basis: 50%;
     }
-    img {
+    .logo {
       flex-shrink: 0;
       padding: 0 20px;
     }
@@ -128,7 +133,7 @@
     .footer-heading {
       margin-bottom: 30px;
       img {
-        width: 105px;
+        width: 70px;
       }
     }
     .column {
@@ -148,5 +153,25 @@
     .footer-links {
       width: 95%;
     }
+  }
+
+  @include respond-to(2k) {
+    .logo {
+      height: 200px;
+      width: 200px;
+    }
+    .column {
+      a {
+        font-size: 25px;
+      }
+      .rounded-icon {
+        padding:20px;
+        svg {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+
   }
 }
