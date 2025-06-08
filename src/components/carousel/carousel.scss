@@ -39,10 +39,17 @@
       padding: 1rem;
     }
     .icon-btn {
-      img {
-        height: 50px;
-        width: 50px;
-      }
+      height: 50px;
+      width: 50px;
+    }
+  }
+  @include respond-to(xs) {
+    .icon-btn {
+      height: 30px;
+      width: 30px;
+    }
+    .carousel-slide {
+      padding: 5px;
     }
   }
 }
@@ -167,6 +174,14 @@
       span {
         width: 30px;
         height: 3px;
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+    .content {
+      h1 {
+        font-size: 33px;
       }
     }
   }

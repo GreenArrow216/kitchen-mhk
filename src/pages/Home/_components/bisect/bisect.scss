@@ -58,6 +58,7 @@
       }
     }
   }
+
   @include respond-to(mobile) {
     flex-direction: column-reverse;
     .img-container {
@@ -76,14 +77,24 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        p {
-          font-size: 11px;
-        }
         .desc {
           font-size: 13px;
         }
         h2 {
           font-size: 30px;
+        }
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+    .bisect-content {
+      .discover {
+        h2 {
+          font-size: 24px;
+        }
+        .desc {
+          font-size: 11px;
         }
       }
     }

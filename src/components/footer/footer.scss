@@ -122,6 +122,7 @@
     }
     .footer-links {
       flex-wrap: wrap;
+      // width: 95%;
       margin-bottom: 25px;
     }
     .footer-heading {
@@ -140,6 +141,12 @@
       a {
         font-size: 10px;
       }
+    }
+  }
+
+  @include respond-to(xs) {
+    .footer-links {
+      width: 95%;
     }
   }
 }

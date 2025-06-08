@@ -30,6 +30,10 @@ button {
     box-shadow: none;
     cursor: pointer;
     z-index: 10;
+    img {
+      height: 100%;
+      width: 100%;
+    }
     &:hover,
     &:active {
       box-shadow: none;
@@ -61,6 +65,11 @@ button {
     &.lg {
       padding: 15px 25px;
       font-size: 12px;
+    }
+  }
+  @include respond-to(xs) {
+    &.lg {
+      padding: 10px 25px;
     }
   }
 }
@@ -118,4 +127,10 @@ p {
   letter-spacing: vars.$spaced-letters;
   color: vars.$primary-color;
   font-size: 13px;
+  @include respond-to(mobile) {
+    font-size: 11px;
+  }
+  @include respond-to(xs) {
+    font-size: 10px;
+  }
 }

@@ -66,4 +66,18 @@
       }
     }
   }
+
+  @include respond-to(xs) {
+    h3 {
+      font-size: 20px;
+    }
+    .testimonial-slide {
+      .description {
+        font-size: 13px;
+      }
+      .author {
+        font-size: 12px;
+      }
+    }
+  }
 }
